@@ -10,7 +10,7 @@ task patchRepo {
         def propsFile = new File(cloneRepo.gitDir, 'src/main/resources/edda.properties')
         def propsContent = propsFile.text
         propsFile.withWriter { out ->
-            out << propsContent.replace('edda.region=us-west-1', 'edda.region=us-west-2')
+            out << propsContent.replace('edda.region=us-west-1', 'edda.region=eu-west-1')
         }
         // TODO Use ElasticSearch instead of mongo
     }

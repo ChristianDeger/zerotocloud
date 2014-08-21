@@ -9,7 +9,7 @@ task patchRepo {
         def client = new File(cloneRepo.gitDir, 'src/main/resources/client.properties')
         def propsContent = client.text
         client.withWriter { out ->
-            out << propsContent.replace('us-west-1', 'us-west-2')
+            out << propsContent.replace('us-west-1', 'eu-west-1')
         }
 
         def simian = new File(cloneRepo.gitDir, 'src/main/resources/simianarmy.properties')
